@@ -54,6 +54,6 @@ public class ChatController {
 
     @GetMapping("/chattutlist")
     public List<Tut> chattutlist(@RequestParam(value = "q") String q) {
-        return ResponseEntity.ok(chatService.chattutlist(q));
+        return ResponseEntity.ok(chatService.chattutlist(q)).getBody();
     }
 }
