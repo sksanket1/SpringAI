@@ -11,4 +11,12 @@ public interface ChatService {
     Tut chattut(String query);
 
     List<Tut> chattutlist(String q);
+
+    String chattemplate(String q);
+
+    String chatTemplateRender();
+
+    String sysPromptTemplate();
+
+    String promptFile();
 }

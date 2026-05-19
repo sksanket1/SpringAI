@@ -56,4 +56,24 @@ public class ChatController {
     public List<Tut> chattutlist(@RequestParam(value = "q") String q) {
         return ResponseEntity.ok(chatService.chattutlist(q)).getBody();
     }
+
+    @GetMapping("/chattemplate")
+    public ResponseEntity<String> chattemplate(@RequestParam(value = "q") String q) {
+        return ResponseEntity.ok(chatService.chattemplate(q));
+    }
+
+    @GetMapping("/chatTemplateRender")
+    public ResponseEntity<String> chatTemplateRender() {
+        return ResponseEntity.ok(chatService.chatTemplateRender());
+    }
+
+    @GetMapping("/sysPromptTemplate")
+    public ResponseEntity<String> sysPromptTemplate() {
+        return ResponseEntity.ok(chatService.sysPromptTemplate());
+    }
+
+    @GetMapping("/promptFile")
+    public ResponseEntity<String> promptFile() {
+        return ResponseEntity.ok(chatService.promptFile());
+    }
 }
